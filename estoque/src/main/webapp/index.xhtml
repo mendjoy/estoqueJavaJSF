@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<h:outputStylesheet name="css/style.css" />
+	<title>Estoque</title>
+</h:head>
+<h:body>
+	<h:form id="cadastroProduto">
+
+		<h1>Cadastro de Produto</h1>
+		<p:growl id="msgSucesso" showDetail="true" life="5000"  globalOnly="true"/>
+	    
+		<h:panelGrid id="formGrid" columns="2" columnClasses="label,field">
+		
+			<p:outputLabel for="descricao" value="Descrição"/>
+			<p:inputText id="descricao" value="#{produtoController.produto.descricao}" maxlength="50"/>
+			<h:outputLabel/><h:message for="descricao" style="color: red"/>
+       		
+			<h:outputLabel for="dataValidade" value="Data de Validade" />
+			<p:calendar id="dataValidade" value="#{produtoController.produto.validade}" pattern="dd/MM/yyyy" minDate="01/01/2020" maxDate="31/12/2999" mask="99/99/9999" />
+			<h:outputLabel/><h:message for="validade" style="color: red"/>
+			
+			<h:outputLabel for="dataCadastro" value="Data de Cadastro" />
+			<p:calendar id="dataCadastro" value="#{produtoController.produto.cadastro}" pattern="dd/MM/yyyy" minDate="01/01/2020" maxDate="31/12/2999" mask="99/99/9999"/>
+			<h:outputLabel/><h:message for="validade" style="color: red"/>
+			
+			<p:outputLabel for="preco" value="Preço"/>
+			<p:inputNumber id="preco" value="#{produtoController.produto.preco}" symbol="R$ " maxValue="9999999999999.99" symbolPosition="p" decimalSeparator="," thousandSeparator="." />
+			
+           
+            <h:outputLabel/><h:message for="preco" style="color: red"/>
+            
+            <h:outputLabel for="ativo" value="Ativo" />
+			<p:selectBooleanCheckbox id="ativo" value="#{produtoController.produto.ativo}" />
+			
+		</h:panelGrid>
+
+		<h:panelGrid columns="2" styleClass="btnContainer">
+			<p:commandButton id="gravarBtn" value="Gravar" action="#{produtoController.gravarProduto}" styleClass="btn gravarBtn" update="@form" />
+			<p:commandButton id="limparBtn" value="Limpar" action="#{produtoController.limparInputs}"  styleClass="btn limparBtn" update="@form" />
+		</h:panelGrid>
+
+	</h:form>
+
+</h:body>
+</html>

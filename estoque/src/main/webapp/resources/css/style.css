@@ -1,0 +1,47 @@
+*{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+	display: flex;
+    justify-content: center;  
+    align-items: center;      
+    height: 100vh;            
+}
+
+#cadastroProduto {
+    border-radius: 15px;
+    width: 500px; 
+    border: 1px solid #3d3846;
+    padding: 20px;
+}
+
+#cadastroProduto h1{
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.btnContainer{
+	display: flex;
+    justify-content: center;
+    margin-top: 15px; 
+}
+
+.btn{
+    color: white;
+    font-weight: bold;
+    border-radius: 15px;
+    padding: 8px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+}
+
+.gravarBtn{
+	background-color: #008000;
+}
+
+.limparBtn{
+	background-color: #e5a50a;
+}
