@@ -19,3 +19,7 @@ Este projeto é uma aplicação web para o cadastro de produtos utilizando JavaS
   
 ## Banco de Dados
 - MySQL: Banco de dados relacional, utiliza SQL (Structured Query Language) para consultas, manipulações dos dados, criações de bancos e de tabelas.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/mendjoy/estoqueJavaJSF/refs/heads/main/Captura%20de%20tela%20de%202025-04-23%2019-29-08.png" width="700"/>
+</p>
